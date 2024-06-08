@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Quest Container
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a take-home assignment.
 
-## Available Scripts
+The quest container is a feature from CareerOS where users will have customized quests to help them manage their careers.
 
-In the project directory, you can run:
+The quest container receives a list of quest items from the API (currently mocked) and displays a series of cards with customized messages based on the properties of each quest item.
 
-### `npm start`
+The goal of this project is to showcase my capacity of fetching data, creating a dynamic container,  creating reusable React components, knowledge of smart/dumb pattern, capacity of following BEM naming convention and code readability.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Test Requirements
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The most important requirements for this test are:
 
-### `npm test`
+- Follow BEM methodology for SCSS classes
+- Create reusable components for different types of quest 
+- Follow smart/dumb component pattern
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+It goes without saying that the final result should match the design file perfectly, the container should be dynamic (only render the data retrieved from the API) and no functionality further than the requirements should be added.
 
-### `npm run build`
+## Get started
+In order to run this project locally, you will need Node.js installed on version >= 14.x and the last stable version of npm or yarn. Check relevant docs on how to get this installed for your OS.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Clone this repo locally
+- Run `npm install` or `yarn install`
+- Run `npm start` to execute the server locally
+- Open your browser on localhost usually at http://localhost:3000
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Next steps
+As this implementation follows strictly a series of instructions and requirements, this is not production ready. Here is what could be added to a final product:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Fetching of a live API for real data;
+- API calls for marking a quest as complete or discarding it (according to hover state of each Quest card);
+- A hover-state message for the info button on the container title;
