@@ -3,10 +3,17 @@ import QuestCard from "../QuestCard"
 const QuestCoffeeContent = (quest) => {
     const logo = `${process.env.PUBLIC_URL}/coffee.svg` // this should actually be an existing value from quest.contact.profile_image
     const title = `Schedule a coffee with ${quest.contact.first_name} ${quest.contact.last_name} at ${quest.company.name}`
-    // Fix span. First idea is to have a TextComponent that accepts a few props, thus allowing for <br> and <span> tags to be built
-    const text = `Get unique insights from your new contact by scheduling an informational interview with them. Make sure to use our <span>coffee chat tips</span> to prepare for your meeting.`
+    const text1 = `Get unique insights from your new contact by scheduling an informational interview with them. Make sure to use our`
+    const textSpan = `coffee chat tips`
+    const text2 = `to prepare for your meeting.`
+    const button = null;
     return (
-        <QuestCard logo={logo} title={title} text={text}/>
+        <div className="quest-card">
+            <img src={logo} alt="Quest logo" />
+            <h2>{title}</h2>
+            <p>{text1} <span>{textSpan}</span> {text2}</p>
+            {button && <button>{button}</button>}
+        </div>
     )
 }
 

@@ -3,7 +3,7 @@ const QuestCard = ({ logo, title, text, button }) => {
       <div className="quest-card">
         <img src={logo} alt="Quest logo" />
         <h2>{title}</h2>
-        {text}
+        <p>{text}</p>
         {button && <button>{button}</button>}
       </div>
     );
