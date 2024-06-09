@@ -1,5 +1,3 @@
-import QuestCard from "../QuestCard"
-
 const QuestCoffeeContent = (quest) => {
     const logo = `${process.env.PUBLIC_URL}/coffee.svg` // this should actually be an existing value from quest.contact.profile_image
     const title = `Schedule a coffee with ${quest.contact.first_name} ${quest.contact.last_name} at ${quest.company.name}`
