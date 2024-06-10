@@ -1,6 +1,6 @@
 import './QuestContainer.scss'
 import { getQuestProps } from './helpers/getQuestProps.js';
-import { QuestCard } from './questCard/index.js';
+import { Card } from '../card/index.js';
 import React, { useEffect, useState } from 'react';
 
   /**
@@ -37,16 +37,16 @@ function QuestContainer () {
                   const { logo, title, text } = cardProps;
                   const buttonType = 'PH'
                   return (
-                    <QuestCard.Root key={quest.id}>
+                    <Card.Root key={quest.id}>
                       <div className="card__content">
-                        {logo && <QuestCard.Logo src={logo} />}
+                        {logo && <Card.Logo src={logo} />}
                         <div className="card__body">
-                          {title && <QuestCard.Title content={title}/>}
-                          {text && <QuestCard.Text textProps={text}/>}
+                          {title && <Card.Title content={title}/>}
+                          {text && <Card.Text textProps={text}/>}
                         </div>
-                        {buttonType && <QuestCard.Button button={buttonType}/>}
+                        {buttonType && <Card.Action button={buttonType}/>}
                       </div>
-                    </QuestCard.Root>
+                    </Card.Root>
                   )
                 })}
             </div>

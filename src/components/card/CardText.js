@@ -1,4 +1,4 @@
-const QuestCardText = ({textProps}) => {
+const CardText = ({textProps}) => {
     if (textProps.format === 'lineBreak') {
         return (
             <p className="card__text">{textProps.p}<br></br>{textProps.p2}</p>
@@ -14,4 +14,4 @@ const QuestCardText = ({textProps}) => {
     }
 }
 
-export { QuestCardText };
+export { CardText };

@@ -1,4 +1,4 @@
-const QuestCardRoot = ({children}) => {
+const CardRoot = ({children}) => {
     return (
       <div className="card">
         {children}
@@ -6,4 +6,4 @@ const QuestCardRoot = ({children}) => {
     );
   };
 
-export { QuestCardRoot };
+export { CardRoot };
