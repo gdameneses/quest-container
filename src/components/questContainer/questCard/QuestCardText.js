@@ -1,4 +1,5 @@
-const QuestCardText = (textProps) => {
+const QuestCardText = ({textProps}) => {
+    console.log(textProps)
     if (textProps.format === 'lineBreak') {
         return (
             <p>{textProps.p}<br></br>{textProps.p2}</p>
