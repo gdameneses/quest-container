@@ -1,5 +1,5 @@
 import './QuestContainer.scss'
-import { QuestCard } from './questCards/index.js';
+import { QuestCard } from './questCard/index.js';
 import React, { useEffect, useState } from 'react';
 
 
@@ -80,7 +80,7 @@ const getQuestProps = (quest) => {
     "send_linkedin_connection": {
       logo: `${process.env.PUBLIC_URL}/avatar.svg`, // this should actually be an existing value from quest.contact.profile_image,
       title: `Send a LinkedIn Invitation to ${quest?.contact?.first_name} ${quest?.contact?.last_name} at ${quest?.company?.name}`,
-      text: { p: 'I am a text'}
+      text: { p: 'Send an invitation with a tailored message to your new contact. Our AI will help you!'}
     },
     "send_first_email": {
       logo: `${process.env.PUBLIC_URL}/avatar.svg`, // this should actually be an existing value from quest.contact.profile_image
@@ -123,9 +123,13 @@ const getQuestProps = (quest) => {
  */
 const renderQuestCard = (quest) => {
     const questCardProps = getQuestProps(quest);
+    const { logo, title, text, buttonType } = questCardProps;
     return (
-    <QuestCard.Root {...questCardProps} key={quest.id}>
-      <QuestCard.Text {...questCardProps.text}/>
+    <QuestCard.Root key={quest.id}>
+      <QuestCard.Logo src={logo}/>
+      <QuestCard.Title content={title}/>
+      <QuestCard.Text textProps={text}/>
+      <QuestCard.Button button={buttonType}/>
     </QuestCard.Root>
     )
   };
