@@ -23,15 +23,15 @@ const useFetchQuests = () => {
 };
 
 
-function QuestContainer () {  
+function QuestContainer (props) {  
     const quests = useFetchQuests();
     return (
-        <div className="container">
-            <div>
-                <h1>Quests</h1>
-                <img src={`${process.env.PUBLIC_URL}/info.svg`} alt="Info button"/>
+        <div className={props.className}>
+            <div className='quests-container__header'>
+                <h1 className='quests-container__title'>Quests</h1>
+                <img src={`${process.env.PUBLIC_URL}/info.svg`} alt="Info button" className='quests-container__image'/>
             </div>
-            <div>
+            <div className='quests-container__body'>
                 {quests.map(quest => {
                   const cardProps = getQuestProps(quest);
                   return (
