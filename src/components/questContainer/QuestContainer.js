@@ -1,6 +1,6 @@
-import './QuestContainer.scss'
+import './questContainer.scss'
 import { getQuestProps } from './helpers/getQuestProps.js';
-import { Card } from '../card/index.js';
+import { Card } from '../card/Card.js';
 import React, { useEffect, useState } from 'react';
 
   /**
@@ -26,7 +26,7 @@ const useFetchQuests = () => {
 function QuestContainer () {  
     const quests = useFetchQuests();
     return (
-        <div>
+        <div className="container">
             <div>
                 <h1>Quests</h1>
                 <img src={`${process.env.PUBLIC_URL}/info.svg`} alt="Info button"/>
@@ -34,19 +34,8 @@ function QuestContainer () {
             <div>
                 {quests.map(quest => {
                   const cardProps = getQuestProps(quest);
-                  const { logo, title, text } = cardProps;
-                  const buttonType = 'PH'
                   return (
-                    <Card.Root key={quest.id}>
-                      <div className="card__content">
-                        {logo && <Card.Logo src={logo} />}
-                        <div className="card__body">
-                          {title && <Card.Title content={title}/>}
-                          {text && <Card.Text textProps={text}/>}
-                        </div>
-                        {buttonType && <Card.Action button={buttonType}/>}
-                      </div>
-                    </Card.Root>
+                    <Card key={quest.id} props={cardProps}/>
                   )
                 })}
             </div>
