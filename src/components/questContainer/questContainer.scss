@@ -1,4 +1,49 @@
 .quests-container {
     height: 519px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 4px;
+}
+
+.quests-container__header {
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.quests-container__title {
+    margin: 0 12px 0 0;
+}
+
+.quests-container__body {
+    margin-top: 16px;
+    padding-right: 20px;
     overflow-y: scroll;
 }
+
+.quests-container__body::-webkit-scrollbar { 
+    width: 6px;
+  }
+  
+  .quests-container__body::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0); 
+  }
+  
+  .quests-container__body::-webkit-scrollbar-thumb {
+    background: #BEC9C8; 
+    border-radius: 4px; 
+  }
+  
+  .quests-container__body::-moz-scrollbar {
+    width: 6px;
+  }
+  
+  .quests-container__body::-moz-scrollbar-track {
+    background: rgba(0,0,0,0); 
+  }
+  
+  .quests-container__body::-moz-scrollbar-thumb {
+    background: #BEC9C8; 
+    border-radius: 4px; 
+  }
