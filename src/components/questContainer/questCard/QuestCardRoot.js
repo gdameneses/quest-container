@@ -1,6 +1,6 @@
 const QuestCardRoot = ({children}) => {
     return (
-      <div>
+      <div className="card">
         {children}
       </div>
     );

@@ -1,8 +1,6 @@
 const QuestCardLogo = (props) => {
     return (
-      <div>
-        <img src={props.src} alt="Quest logo" />
-      </div>
+        <img src={props.src} alt="Quest logo" className="card__image"/>
     );
   };
 

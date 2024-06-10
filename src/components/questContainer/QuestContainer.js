@@ -23,7 +23,7 @@ const useFetchQuests = () => {
 };
 
 
-function QuestContainer () {
+function QuestContainer () {  
     const quests = useFetchQuests();
     return (
         <div>
@@ -34,16 +34,21 @@ function QuestContainer () {
             <div>
                 {quests.map(quest => {
                   const cardProps = getQuestProps(quest);
-                  const { logo, title, text, buttonType } = cardProps;
+                  const { logo, title, text } = cardProps;
+                  const buttonType = 'PH'
                   return (
-                  <QuestCard.Root key={quest.id}>
-                    {logo && <QuestCard.Logo src={logo} />}
-                    {title && <QuestCard.Title content={title} />}
-                    {text && <QuestCard.Text textProps={text} />}
-                    {buttonType && <QuestCard.Button button={buttonType} />}
-                  </QuestCard.Root>
-      )
-                })}    
+                    <QuestCard.Root key={quest.id}>
+                      <div className="card__content">
+                        {logo && <QuestCard.Logo src={logo} />}
+                        <div className="card__body">
+                          {title && <QuestCard.Title content={title}/>}
+                          {text && <QuestCard.Text textProps={text}/>}
+                        </div>
+                        {buttonType && <QuestCard.Button button={buttonType}/>}
+                      </div>
+                    </QuestCard.Root>
+                  )
+                })}
             </div>
         </div>
     )

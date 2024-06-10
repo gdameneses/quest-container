@@ -1,8 +1,6 @@
 const QuestCardButton = (props) => {
     return (
-      <div>
-        {props.button && <button>{props.button}</button>}
-      </div>
+      <button className={ props.modifier ? `card__action ${props.modifier}` : `card__action`}>{props.button}</button>
     );
   };
 
