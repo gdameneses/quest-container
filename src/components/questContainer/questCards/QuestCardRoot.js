@@ -1,12 +1,12 @@
-const QuestCard = ({ logo, title, text, button }) => {
+const QuestCardRoot = ({ logo, title, children, button }) => {
     return (
       <div className="quest-card">
         <img src={logo} alt="Quest logo" />
         <h2>{title}</h2>
-        <p>{text}</p>
+        {children}
         {button && <button>{button}</button>}
       </div>
     );
   };
 
-export default QuestCard;
+export { QuestCardRoot };
