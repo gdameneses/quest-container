@@ -24,7 +24,8 @@
       action: {
         modifier: `card__action--outline card__action--rounded`,
         elements: { icon: `arrow-up-right`}
-      }
+      },
+      control: ['check', 'delete']
     }),
     "resolve-comment": () => ({
       logo: `${process.env.PUBLIC_URL}/message.svg`, 
@@ -57,7 +58,8 @@
       action: {
         modifier: `card__action--outline card__action--rounded`,
         elements: { icon: `arrow-up-right`}
-      }
+      },
+      control: ['delete']
     }),
     "send_linkedin_message": (quest) => ({
       logo: `${process.env.PUBLIC_URL}/avatar.svg`, // TODO: this should actually be an existing value from quest.contact. profile_image
@@ -90,7 +92,8 @@
       action: {
         modifier: `card__action--outline card__action--rounded`,
         elements: { icon: `arrow-up-right`}
-      }
+      },
+      control: ['delete']
     }),
     "add_new_contact": (quest) => ({
       logo: `${quest?.company?.logo_url}`,
@@ -113,7 +116,8 @@
       action: {
         modifier: `card__action--outline card__action--rounded`,
         elements: { icon: `arrow-up-right`}
-      }
+      },
+      control: ['check']
     }),
     "send_follow_up_email": (quest) => ({
       logo: `${process.env.PUBLIC_URL}/avatar.svg`, // TODO: this should actually be an existing value from quest.contact.profile_image
